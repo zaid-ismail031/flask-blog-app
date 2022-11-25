@@ -1,0 +1,17 @@
+{% extends "template.html" %}
+
+{% block title %}
+    Edit profile
+{% endblock %}
+
+{% block main %}
+    <form action="/edit" method = "post">
+        <div class="form-group">
+            <label for="post">Edit your bio</label>
+            <textarea name="bio" cols="150" rows="15">
+            </textarea>
+        </div>
+        
+        <button class="btn btn-primary" type="submit">Submit</button>
+    </form>
+{% endblock %}

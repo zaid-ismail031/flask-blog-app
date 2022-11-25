@@ -1,0 +1,23 @@
+{% extends "template.html" %}
+
+{% block title %}
+    My blog
+{% endblock %}
+
+{% block main %}
+
+    <h4>{{ error }}</h4>
+    {% if length != 0 %}
+    {% for i in length %}
+    <div class = "card horizontal">
+        <div class = "card-content">
+            <h4>{{ bloginfo[i]["date"] }}</h4>
+            <h4>{{ bloginfo[i]["time"] }}</h4>
+            <h5>{{ bloginfo[i]["title"] }}</h5>
+            <p>{{ bloginfo[i]["post"] }}</p>
+        </div>
+    </div>
+    {% endfor %}
+    {% endif %}
+
+{% endblock %}

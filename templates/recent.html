@@ -1,0 +1,20 @@
+{% extends "template.html" %}
+
+{% block title %}
+    Recent Blogs
+{% endblock %}
+
+{% block main %}
+    {% for i in length %}
+    <div class = "card horizontal">
+        <div class = "card-content">
+        {{ info[i]["username"] }} says:
+        Date: {{ info[i]["date"] }}
+        Time: {{ info[i]["time"] }}
+        <h5>Title: {{ info[i]["title"] }}</h5>
+        <p>{{ info[i]["post"] }}</p>
+        </div>
+    </div>
+    <br>
+    {% endfor %}
+{% endblock %}

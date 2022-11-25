@@ -1,0 +1,24 @@
+{% extends "template.html" %}
+
+{% block title %}
+    Post
+{% endblock %}
+
+{% block main %}
+    {{ error }}
+    <form action="/post" method = "post">
+
+        <div class="form-group">
+            <input autocomplete="off" autofocus class="form-control" name="title" placeholder="Title" type="text">
+        </div>
+        
+        
+        <div class="form-group">
+            <label for="post">Body</label>
+            <textarea name="post" cols="150" rows="15">
+            </textarea>
+        </div>
+        
+        <button class="btn btn-primary" type="submit">Submit</button>
+    </form>
+{% endblock %}

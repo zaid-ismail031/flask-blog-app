@@ -1,0 +1,17 @@
+{% extends "template.html" %}
+
+{% block title %}
+    Profile
+{% endblock %}
+
+{% block main %}
+    <div class = "card horizontal">
+        <div class = "card-content">
+            <h4>BIO:</h4>
+            <p>{{ bio }}</p>
+    
+            <a href="/edit">Edit bio</a>
+        </div>
+    </div>
+
+{% endblock %}
